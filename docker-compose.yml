@@ -40,7 +40,7 @@ services:
       - xpack.security.enabled=false        # demo only — see note above
       - xpack.license.self_generated.type=basic
       - bootstrap.memory_lock=true          # never swap the heap to disk
-      - ES_JAVA_OPTS=-Xms1g -Xmx1g          # pin the heap so the stack fits a laptop
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m      # pin the heap so the stack fits a laptop
     ulimits:
       memlock: { soft: -1, hard: -1 }
     ports:

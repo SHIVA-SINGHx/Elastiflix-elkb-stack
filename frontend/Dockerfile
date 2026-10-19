@@ -7,7 +7,12 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install --force
 
+<<<<<<< HEAD
 # Copy application source
+=======
+RUN npm update-browserslist-db@latest
+
+>>>>>>> b1b5e9fbead19ed58473dc103d7e8f08106c5b6b
 COPY . .
 
 # Expose frontend port
