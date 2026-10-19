@@ -7,11 +7,10 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install --force
 
-RUN npx update-browserslist-db@latest
-
+# Copy application source
 COPY . .
 
-# Expose port 3000
+# Expose frontend port
 EXPOSE 3000
 
 # Start the application
